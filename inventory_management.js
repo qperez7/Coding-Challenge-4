@@ -31,6 +31,13 @@ console.log(update) //Output: Laptop Stock Status after update: Low Stock
 
 //Task 4: Create a Function to Check Low Stock Products
 function checkLowStock(inventory) {
-inventory.forEach(i => {if(i.quantity < i.lowStockLevel) {console.log(`${i.name} is low`)}})
+inventory.forEach(inventory => {if(inventory.quantity < inventory.lowStockLevel) {console.log(`${inventory.name} is low`)}})
 };
-console.log(checkLowStock(inventory));
+console.log(checkLowStock(inventory)); //Output : I am unsure why its undefined
+
+//Task 5: Create a Function to Calculate Total Inventory Value
+ const inventoryValue = function(inventory) {
+    return inventory.reduce((sum,cv) => {
+        return sum + (cv.price * cv.quantity)
+    },0)}
+    console.log(inventoryValue(inventory)) // Output: Total returned is $21050
