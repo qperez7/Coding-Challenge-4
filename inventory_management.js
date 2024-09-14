@@ -10,13 +10,22 @@ const inventory = [
 console.log(inventory); // Output: An array of 5 products
 
 // Task 2: Create a Function to Display Product Details
-function displayProductDetails(products,stock) {
-products = inventory.name,inventory.price,inventory.quantity
-stock = inventory.lowStockLevel
-if (inventory.quantity >= inventory.lowStockLevel) {
-    return "In Stock"; } 
-   if (inventory.quantity <= inventory.lowStockLevel) {
-    return "Low Stock"; }
-    return products,stock
-;
-}; console.log(displayProductDetails(inventory[0],3))
+const  Laptop = [{ item: 'Laptop', price: 1200, quantity: 10, lowStockLevel: 3 }];
+
+function displayProductDetails(product) {
+    const status = product.quantity <= product.lowStockLevel ? "Low Stock" : "In Stock"
+    return `${Laptop.item} is ${status}`
+}
+console.log(displayProductDetails(Laptop)); // Output: Gives laptop stock status
+console.log(Laptop); // Gives the name,quanitity, price
+
+// Task 3: Create a Function to Update Product Stock After Sales
+function updateStock(currentQuantity,unitsSold) {
+    return currentQuantity - unitsSold;
+}
+let unitsSold = 7
+let newQuantity = updateStock(10,7);
+console.log(newQuantity);
+const update = newQuantity >= Laptop.lowStockLevel ? "In Stock": "Low Stock"
+console.log(update)
+
