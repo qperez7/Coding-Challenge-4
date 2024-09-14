@@ -25,7 +25,12 @@ function updateStock(currentQuantity,unitsSold) {
 }
 let unitsSold = 7
 let newQuantity = updateStock(10,7);
-console.log(newQuantity);
+console.log(newQuantity); // Output: New quantity is 3
 const update = newQuantity >= Laptop.lowStockLevel ? "In Stock": "Low Stock"
-console.log(update)
+console.log(update) //Output: Laptop Stock Status after update: Low Stock
 
+//Task 4: Create a Function to Check Low Stock Products
+function checkLowStock(inventory) {
+inventory.forEach(i => {if(i.quantity < i.lowStockLevel) {console.log(`${i.name} is low`)}})
+};
+console.log(checkLowStock(inventory));
