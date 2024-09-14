@@ -41,3 +41,12 @@ console.log(checkLowStock(inventory)); //Output : I am unsure why its undefined
         return sum + (cv.price * cv.quantity)
     },0)}
     console.log(inventoryValue(inventory)) // Output: Total returned is $21050
+
+//Task 6: Create a Function to Process a Sale
+function processSale(productName,unitSold) {
+    if (inventory.find(inventory.name === 'Smartwatch')) {
+        console.log (updateStock(3,2)); }
+    else if (inventory.find(inventory.name != 'Smartwatch')) {
+        console.log( 'error item is not in inventory') }
+    else {
+         console.log ('null'); }}
