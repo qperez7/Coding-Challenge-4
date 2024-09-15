@@ -30,10 +30,11 @@ const update = newQuantity >= Laptop.lowStockLevel ? "In Stock": "Low Stock"
 console.log(update) //Output: Laptop Stock Status after update: Low Stock
 
 //Task 4: Create a Function to Check Low Stock Products
-function checkLowStock(inventory) {
-inventory.forEach(inventory => {if(inventory.quantity < inventory.lowStockLevel) {console.log(`${inventory.name} is low`)}})
-};
-console.log(checkLowStock(inventory)); //Output : I am unsure why its undefined
+let checkLowStock = [];
+let lowStockLevel = inventory.lowStockLevel
+inventory.forEach(inventory => {if (inventory.quantity < lowStockLevel) { checkLowStock.push(inventory.name);
+}});
+console.log(checkLowStock) // Output: The Array is empty which is correct no values match if statement request
 
 //Task 5: Create a Function to Calculate Total Inventory Value
  const inventoryValue = function(inventory) {
@@ -44,9 +45,12 @@ console.log(checkLowStock(inventory)); //Output : I am unsure why its undefined
 
 //Task 6: Create a Function to Process a Sale
 function processSale(productName,unitSold) {
-    if (inventory.find(inventory.name === 'Smartwatch')) {
-        console.log (updateStock(3,2)); }
-    else if (inventory.find(inventory.name != 'Smartwatch')) {
+    console.log(productName,unitSold);
+}
+
+    if (inventory[4].name === 'Smartwatch') {
+       console.log ('quantity reduced to', updateStock(3,2)); } // Output: Product was found
+    else  {
         console.log( 'error item is not in inventory') }
-    else {
-         console.log ('null'); }}
+    
+console.log (processSale('Smartwatch',2)) // Output: Sale was processed 
